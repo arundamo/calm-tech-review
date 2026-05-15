@@ -82,7 +82,7 @@
             margin-top: 20px;
             border: 3px solid var(--dark);
             padding: 14px;
-            background: #fff;
+            background: var(--surface);
         }
 
         .result strong {
@@ -106,19 +106,19 @@
         <div class="grid">
             <div>
                 <label for="kindActs">Kind acts</label>
-                <input id="kindActs" type="number" min="0" value="0">
+                <input id="kindActs" type="number" min="0" value="0" aria-label="Kind acts">
             </div>
             <div>
                 <label for="helpHours">Hours helping others</label>
-                <input id="helpHours" type="number" min="0" step="0.5" value="0">
+                <input id="helpHours" type="number" min="0" step="0.5" value="0" aria-label="Hours helping others">
             </div>
             <div>
                 <label for="harmfulActs">Harmful acts</label>
-                <input id="harmfulActs" type="number" min="0" value="0">
+                <input id="harmfulActs" type="number" min="0" value="0" aria-label="Harmful acts">
             </div>
             <div>
                 <label for="liesTold">Lies told</label>
-                <input id="liesTold" type="number" min="0" value="0">
+                <input id="liesTold" type="number" min="0" value="0" aria-label="Lies told">
             </div>
         </div>
 
