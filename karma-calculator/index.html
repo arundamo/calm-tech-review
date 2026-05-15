@@ -124,7 +124,7 @@
 
         <button id="calculateBtn" type="button">Calculate Karma</button>
 
-        <section class="result" aria-live="polite">
+        <section class="result" aria-live="polite" aria-label="Karma calculation result">
             <div>Your karma score: <strong id="karmaScore">0</strong></div>
             <div id="karmaMessage">Balanced. Keep going.</div>
         </section>
@@ -146,7 +146,11 @@
             const calculateBtn = document.getElementById('calculateBtn');
 
             function asNumber(value) {
-                const parsed = Number(value);
+                const normalized = String(value).trim();
+                if (normalized === '') {
+                    return 0;
+                }
+                const parsed = Number(normalized);
                 if (!Number.isFinite(parsed) || parsed < 0) {
                     return 0;
                 }
